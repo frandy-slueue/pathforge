@@ -1,0 +1,232 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg-app:       #020617;
+  --color-bg-surface:   #0B0F1A;
+  --color-bg-elevated:  #111827;
+  --color-bg-canvas:    #0A0D16;
+  --color-bg-hover:     #111826;
+  --color-bg-selected:  #162038;
+  --color-bg-input:     #060810;
+
+  --color-accent:       #00F5C4;
+  --color-accent-2:     #c2410c;
+  --color-accent-3:     #38BDF8;
+
+  --color-text-pri:     #DDE3F0;
+  --color-text-sec:     #5A6A88;
+  --color-text-muted:   #2E3A52;
+
+  --font-ui:            'Syne', sans-serif;
+  --font-mono:          'Space Mono', monospace;
+}
+
+/* ════════════════════════════════════════════════════
+   PathForge — Global Styles
+   CSS custom properties (design tokens) + base reset
+   ════════════════════════════════════════════════════ */
+
+/* ── Design Tokens (Dark Theme — Default) ─────────── */
+:root {
+  /* Backgrounds */
+  --bg-app:          #020617;
+  --bg-surface:      #0B0F1A;
+  --bg-elevated:     #111827;
+  --bg-canvas:       #0A0D16;
+  --bg-hover:        #111826;
+  --bg-active:       #162038;
+  --bg-selected:     #162038;
+  --bg-input:        #060810;
+
+  /* Accent Colors */
+  --accent:          #00F5C4;
+  --accent-dim:      rgba(0, 245, 196, 0.10);
+  --accent-glow:     rgba(0, 245, 196, 0.18);
+  --accent-2:        #c2410c;
+  --accent-2-dim:    rgba(194, 65, 12, 0.10);
+  --accent-3:        #38BDF8;
+
+  /* Text */
+  --text-primary:    #DDE3F0;
+  --text-secondary:  #5A6A88;
+  --text-muted:      #2E3A52;
+  --text-on-accent:  #000000;
+
+  /* Borders */
+  --border:          rgba(255, 255, 255, 0.055);
+  --border-strong:   rgba(255, 255, 255, 0.12);
+  --border-accent:   rgba(0, 245, 196, 0.28);
+
+  /* Canvas */
+  --anchor-fill:     #00F5C4;
+  --anchor-stroke:   rgba(0, 245, 196, 0.9);
+  --handle-fill:     #38BDF8;
+  --selection:       #c2410c;
+  --guide:           rgba(0, 245, 196, 0.5);
+  --grid-minor:      rgba(255, 255, 255, 0.032);
+  --grid-major:      rgba(255, 255, 255, 0.06);
+
+  /* Shadows */
+  --shadow-sm:       0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-md:       0 4px 20px rgba(0, 0, 0, 0.5);
+  --shadow-lg:       0 12px 40px rgba(0, 0, 0, 0.7);
+  --shadow-glow:     0 0 20px rgba(0, 245, 196, 0.15);
+
+  /* Typography */
+  --font-ui:         'Syne', sans-serif;
+  --font-mono:       'Space Mono', monospace;
+
+  /* Sizing */
+  --toolbar-h:       46px;
+  --panel-w:         216px;
+  --status-h:        26px;
+  --r:               5px;
+  --r-lg:            10px;
+}
+
+/* ── Light Theme ──────────────────────────────────── */
+html.theme-light {
+  --bg-app:          #F0F2F5;
+  --bg-surface:      #FFFFFF;
+  --bg-elevated:     #FFFFFF;
+  --bg-canvas:       #E8EBF0;
+  --bg-hover:        #F5F7FA;
+  --bg-active:       #EBF0FF;
+  --bg-selected:     #E8F0FF;
+  --bg-input:        #FAFBFC;
+  --accent:          #00A884;
+  --accent-dim:      rgba(0, 168, 132, 0.10);
+  --accent-glow:     rgba(0, 168, 132, 0.18);
+  --accent-2:        #c2410c;
+  --accent-2-dim:    rgba(194, 65, 12, 0.10);
+  --accent-3:        #0284C7;
+  --text-primary:    #111827;
+  --text-secondary:  #6B7280;
+  --text-muted:      #9CA3AF;
+  --text-on-accent:  #FFFFFF;
+  --border:          rgba(0, 0, 0, 0.08);
+  --border-strong:   rgba(0, 0, 0, 0.16);
+  --border-accent:   rgba(0, 168, 132, 0.4);
+  --grid-minor:      rgba(0, 0, 0, 0.05);
+  --grid-major:      rgba(0, 0, 0, 0.10);
+  --selection:       #c2410c;
+}
+
+/* ── Midnight Theme ───────────────────────────────── */
+html.theme-midnight {
+  --bg-app:          #030408;
+  --bg-surface:      #080B12;
+  --bg-elevated:     #0D1018;
+  --bg-canvas:       #050709;
+  --bg-hover:        #0D1120;
+  --bg-active:       #12183A;
+  --bg-selected:     #12183A;
+  --bg-input:        #030408;
+  --accent:          #A78BFA;
+  --accent-dim:      rgba(167, 139, 250, 0.10);
+  --accent-glow:     rgba(167, 139, 250, 0.18);
+  --accent-2:        #c2410c;
+  --accent-2-dim:    rgba(194, 65, 12, 0.10);
+  --accent-3:        #34D399;
+  --text-primary:    #E2E8F0;
+  --text-secondary:  #475569;
+  --text-muted:      #1E293B;
+  --border:          rgba(255, 255, 255, 0.04);
+  --border-strong:   rgba(255, 255, 255, 0.08);
+  --border-accent:   rgba(167, 139, 250, 0.3);
+  --selection:       #c2410c;
+}
+
+/* ── Solarized Theme ───────────────────────────────── */
+html.theme-solarized {
+  --bg-app:          #002B36;
+  --bg-surface:      #073642;
+  --bg-elevated:     #0D4555;
+  --bg-canvas:       #00212B;
+  --bg-hover:        #073642;
+  --bg-active:       #0D4555;
+  --bg-selected:     #0D4555;
+  --bg-input:        #002B36;
+  --accent:          #2AA198;
+  --accent-dim:      rgba(42, 161, 152, 0.12);
+  --accent-glow:     rgba(42, 161, 152, 0.20);
+  --accent-2:        #c2410c;
+  --accent-2-dim:    rgba(194, 65, 12, 0.10);
+  --accent-3:        #268BD2;
+  --text-primary:    #93A1A1;
+  --text-secondary:  #657B83;
+  --text-muted:      #073642;
+  --text-on-accent:  #002B36;
+  --border:          rgba(147, 161, 161, 0.10);
+  --border-strong:   rgba(147, 161, 161, 0.20);
+  --border-accent:   rgba(42, 161, 152, 0.35);
+  --selection:       #c2410c;
+}
+
+/* ── Base Reset ───────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background-color: var(--bg-app);
+  color: var(--text-primary);
+  font-family: var(--font-ui);
+  font-size: 13px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* React root fills the full viewport */
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+/* ── Scrollbar Styling ────────────────────────────── */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--text-muted); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-secondary); }
+
+/* ── Skeleton Loading Animation ──────────────────── */
+@keyframes shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--bg-surface) 25%,
+    var(--bg-hover)   50%,
+    var(--bg-surface) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: var(--r);
+}
+
+/* ── Focus Visible ────────────────────────────────── */
+*:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* ── Text Selection Color ─────────────────────────── */
+::selection {
+  background: var(--accent-dim);
+  color: var(--text-primary);
+}
